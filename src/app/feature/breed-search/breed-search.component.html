@@ -1,1 +1,7 @@
-<app-search-text [(term)]="term" />
+<app-search-text
+  (onSelectElement)="onSelectBreed($event)"
+  [options]="breedNames"
+/>
+@if (selectedBreed) {
+  <app-breed-sheet [breedName]="selectedBreed" />
+}

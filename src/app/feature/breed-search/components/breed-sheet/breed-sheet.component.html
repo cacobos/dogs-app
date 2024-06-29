@@ -1,1 +1,9 @@
-<p>breed-sheet works!</p>
+<h1>
+  {{ breedName() | titlecase }}
+</h1>
+<img
+  [ngSrc]="(breedImagesUrl$() | async) || ''"
+  loading="lazy"
+  alt="breed image"
+  priority
+/>
