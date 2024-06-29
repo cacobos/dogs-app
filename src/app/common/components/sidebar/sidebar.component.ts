@@ -1,12 +1,28 @@
 import { Component } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'dog',
+  selector: 'app-sidebar',
   standalone: true,
-  imports: [],
+  imports: [
+    MatIconModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    RouterOutlet,
+    RouterLink,
+  ],
   templateUrl: './sidebar.component.html',
-  styles: ``
+  styles: `
+    mat-sidenav-container {
+      height: -webkit-fill-available;
+    }
+  `,
 })
-export class SidebarComponent {
-
-}
+export class SidebarComponent {}
